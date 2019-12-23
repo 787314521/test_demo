@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>信访接待</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no,viewport-fit=cover">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!--<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="pragma" content="no-cache">-->
+		<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+		<meta http-equiv="expires" content="0">
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/teller-css/secondary-page.css" />
+		<script type="text/javascript" src="../js/setRem.js"></script>
+	</head>
+		<!--主界面-->
+		<div class="middleMain">
+			<!--主界面介绍部分-->
+			<div class="topDetail">
+				<P>为来院信访的当事人提供信访服务，包括来访接待以及院长接访等。</P>
+			</div>
+		</div>
+		
+		<!--动画-->
+		<div class="animationPart">
+			<!--语音播放部分-->
+			<div class="musicPart rotate" id='status' onclick='triggerBgMusic()'></div>
+			<!--主界面动画部分-人物-->
+			<div class="container"></div>
+			<!--主界面动画部分-模型-->
+			<div class="containerModel"></div>
+		</div>
+
+		<!--返回首页-->
+		<div class="backPart">
+			<a href="index.html">
+				<img src="../img/teller-img/back.png" title="" alt=""/>
+			</a>
+		</div>
+		
+		<!--背景音频-->
+		<audio  id="audio">
+			<source src="../audio/reception-7.wav">
+		</audio>
+	</body>
+	
+	<!--动画js部分-->
+	<script type="text/javascript" src="../js/teller-js/audio.js" ></script>
+	<script type="text/javascript" src="../js/teller-js/canvas-keyframes.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var count = 0;
+			var imgArr = [];
+			for(var i=1;i<=24;i++){
+				(function(i){
+					var img = new Image();
+					img.onload = function(){
+						img.onload = null;
+						count++;
+						// 有可能图片加载有快有满慢，所以用角标存
+						imgArr[i-1] = img;
+						if(count==24){
+							keyFrames(imgArr);
+						}
+					}
+					img.onerror = function(){
+					}
+					img.src = '../img/teller-img/imgsPerson/'+i+'.png';
+				})(i);
+			} 
+			var counts = 0;
+			var imgArr1= [];
+			for(var j=1;j<=4;j++){
+				(function(j){
+					var img = new Image();
+					img.onload = function(){
+						img.onload = null;
+						counts++;
+						// 有可能图片加载有快有满慢，所以用角标存
+						imgArr1[j-1] = img;
+						if(counts==4){
+							keyFrame(imgArr1);
+						}
+					}
+					img.onerror = function(){
+					}
+					img.src = '../img/teller-img/imgModel7/'+j+'.png';
+				})(j);
+			}
+		}
+		var keyFrames;
+		function keyFrames(imgArr){
+			keyFrames = new CanvasKeyFrames(document.querySelector('.container'), 'array', imgArr, {
+				fps:5,
+				width:195,
+				height:678,
+				ratio:2
+			});
+			keyFrames.play();
+		}
+		var keyFrame;
+		function keyFrame(imgArr1){
+			keyFrame = new CanvasKeyFrames(document.querySelector('.containerModel'), 'array', imgArr1, {
+				fps:5,
+				width:560,
+				height:315
+			});
+			keyFrame.play();
+		}
+	</script>
+	<script type="text/javascript" src="../js/prevent.js" ></script>
+</html>
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>查询咨询</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no,viewport-fit=cover">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!--<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="pragma" content="no-cache">-->
+		<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+		<meta http-equiv="expires" content="0">
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/teller-css/secondary-page.css" />
+		<script type="text/javascript" src="../js/setRem.js"></script>
+	</head>
+		<!--主界面-->
+		<div class="middleMain">
+			<!--主界面介绍部分-->
+			<div class="topDetail">
+				<div id="scrollBox">
+					<ul id="con1" class="bottomBlank">
+						<li>查询咨询：负责案件流程情况查询和一般法律问题解答。<br />
+							（一）对前来查询案件相关信息的，在查验来访人员有效身份证件、确定其与所查案件相关后，可帮助查询立案情况、承办法官、开庭时间、案件进展情况等依法可以公开的案件信息；对咨询法律问题的，可就与诉讼有关的程序性问题进行解答，一般不解答法律实体性问题。<br />
+							（二）对电话查询、咨询与诉讼有关的一般信息和简单问题的，应认真给予解答。<br />
+							（三）对使用中心提供的自助查询设备查询案件信息的，由导诉人员予以引导或指导。<br />
+							诉前释明：负责对前来诉讼的当事人，进行诉讼风险告知，注重引导通过非诉途径解决纠纷，同时应注意依法保护当事人诉权。
+						</li>
+                    </ul>
+				</div>	
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/teller-js/scroll.js" ></script>
+		
+		<!--动画-->
+		<div class="animationPart">
+			<!--语音播放部分-->
+			<div class="musicPart rotate" id='status' onclick='triggerBgMusic()'></div>
+			<!--主界面动画部分-人物-->
+			<div class="container"></div>
+			<!--主界面动画部分-模型-->
+			<div class="containerModel"></div>
+		</div>
+
+		<!--返回首页-->
+		<div class="backPart">
+			<a href="index.html">
+				<img src="../img/teller-img/back.png" title="" alt=""/>
+			</a>
+		</div>
+		
+		<!--背景音频-->
+		<audio  id="audio">
+			<source src="../audio/media-5.wav">
+		</audio>
+	</body>
+	
+	<!--动画js部分-->
+	<script type="text/javascript" src="../js/teller-js/audio.js" ></script>
+	<script type="text/javascript" src="../js/teller-js/canvas-keyframes.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var count = 0;
+			var imgArr = [];
+			for(var i=1;i<=24;i++){
+				(function(i){
+					var img = new Image();
+					img.onload = function(){
+						img.onload = null;
+						count++;
+						// 有可能图片加载有快有满慢，所以用角标存
+						imgArr[i-1] = img;
+						if(count==24){
+							keyFrames(imgArr);
+						}
+					}
+					img.onerror = function(){
+					}
+					img.src = '../img/teller-img/imgsPerson/'+i+'.png';
+				})(i);
+			} 
+			var counts = 0;
+			var imgArr1= [];
+			for(var j=1;j<=4;j++){
+				(function(j){
+					var img = new Image();
+					img.onload = function(){
+						img.onload = null;
+						counts++;
+						// 有可能图片加载有快有满慢，所以用角标存
+						imgArr1[j-1] = img;
+						if(counts==4){
+							keyFrame(imgArr1);
+						}
+					}
+					img.onerror = function(){
+					}
+					img.src = '../img/teller-img/imgModel5/'+j+'.png';
+				})(j);
+			}
+		}
+		var keyFrames;
+		function keyFrames(imgArr){
+			keyFrames = new CanvasKeyFrames(document.querySelector('.container'), 'array', imgArr, {
+				fps:5,
+				width:195,
+				height:678,
+				ratio:2
+			});
+			keyFrames.play();
+		}
+		var keyFrame;
+		function keyFrame(imgArr1){
+			keyFrame = new CanvasKeyFrames(document.querySelector('.containerModel'), 'array', imgArr1, {
+				fps:5,
+				width:560,
+				height:315
+			});
+			keyFrame.play();
+		}
+	</script>
+	<script type="text/javascript" src="../js/prevent.js" ></script>
+</html>
+

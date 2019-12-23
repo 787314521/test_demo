@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>材料收转</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no,viewport-fit=cover">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!--<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="pragma" content="no-cache">-->
+		<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+		<meta http-equiv="expires" content="0">
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/teller-css/secondary-page.css" />
+		<script type="text/javascript" src="../js/setRem.js"></script>
+	</head>
+	<body>
+		<!--主界面-->
+		<div class="middleMain">
+			<!--主界面介绍部分-->
+			<div class="topDetail">
+				<div id="scrollBox">
+					<ul id="con1" class="bottomBlank-1">
+						<li>材料收转：负责接收本院正在审理或办理案件的诉讼材料，并及时转交有关部门，同时还设有邮政专递窗口。<br />
+							（一）接受当事人、诉讼代理人、辩护人提交的诉讼材料，同时出具收据，并在二个工作日内转交承办部门，办妥移交手续；<br />
+							（二）对来访人员递交涉及纪检监察等举报投诉材料的，通知纪检监察部门前来收取；<br />
+							（三）将上诉案件的有关材料以及卷宗及时移送上级法院，同时对二审改判、发回重审以及维持原判等相关文书及卷宗材料及时取回并移送本院相关业务庭。<br />
+							文书送达：为前来法院领取诉讼文书的当事人提供有关文书。
+						</li>
+                    </ul>
+				</div>	
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/teller-js/scroll.js" ></script>
+		
+		<!--动画-->
+		<div class="animationPart">
+			<!--语音播放部分-->
+			<div class="musicPart rotate" id='status' onclick='triggerBgMusic()'></div>
+			<!--主界面动画部分-人物-->
+			<div class="container"></div>
+			<!--主界面动画部分-模型-->
+			<div class="containerModel"></div>
+		</div>
+
+		<!--返回首页-->
+		<div class="backPart">
+			<a href="index.html">
+				<img src="../img/teller-img/back.png" title="" alt=""/>
+			</a>
+		</div>
+		
+		<!--背景音频-->
+		<audio  id="audio">
+			<source src="../audio/material-6.wav">
+		</audio>
+	</body>
+	
+	<!--动画js部分-->
+	<script type="text/javascript" src="../js/teller-js/audio.js" ></script>
+	<script type="text/javascript" src="../js/teller-js/canvas-keyframes.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var count = 0;
+			var imgArr = [];
+			for(var i=1;i<=24;i++){
+				(function(i){
+					var img = new Image();
+					img.onload = function(){
+						img.onload = null;
+						count++;
+						// 有可能图片加载有快有满慢，所以用角标存
+						imgArr[i-1] = img;
+						if(count==24){
+							keyFrames(imgArr);
+						}
+					}
+					img.onerror = function(){
+					}
+					img.src = '../img/teller-img/imgsPerson/'+i+'.png';
+				})(i);
+			} 
+			var counts = 0;
+			var imgArr1= [];
+			for(var j=1;j<=4;j++){
+				(function(j){
+					var img = new Image();
+					img.onload = function(){
+						img.onload = null;
+						counts++;
+						// 有可能图片加载有快有满慢，所以用角标存
+						imgArr1[j-1] = img;
+						if(counts==4){
+							keyFrame(imgArr1);
+						}
+					}
+					img.onerror = function(){
+					}
+					img.src = '../img/teller-img/imgModel6/'+j+'.png';
+				})(j);
+			}
+		}
+		var keyFrames;
+		function keyFrames(imgArr){
+			keyFrames = new CanvasKeyFrames(document.querySelector('.container'), 'array', imgArr, {
+				fps:5,
+				width:195,
+				height:678,
+				ratio:2
+			});
+			keyFrames.play();
+		}
+		var keyFrame;
+		function keyFrame(imgArr1){
+			keyFrame = new CanvasKeyFrames(document.querySelector('.containerModel'), 'array', imgArr1, {
+				fps:5,
+				width:560,
+				height:315
+			});
+			keyFrame.play();
+		}
+	</script>
+	<script type="text/javascript" src="../js/prevent.js" ></script>
+</html>
+

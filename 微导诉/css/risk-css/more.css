@@ -1,0 +1,46 @@
+body {
+  height: 100%;
+  width: 100%;
+  background: #f6f6f6;
+}
+.mainPart ul {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.17066667rem;
+}
+.mainPart ul li {
+  height: 2.15466667rem;
+  width: 100%;
+  background: #fff;
+  display: flex;
+}
+.mainPart ul li .leftPicture {
+  height: 2.13333333rem;
+  width: 13%;
+  display: flex;
+}
+.mainPart ul li .leftPicture img {
+  height: 0.85333333rem;
+  width: 1.06666667rem;
+  align-self: center;
+  margin-left: 50%;
+}
+.mainPart ul li a {
+  width: 87%;
+  height: 2.13333333rem;
+  border-bottom: 0.02133333rem solid #e2e2e2;
+  display: flex;
+}
+.mainPart ul li a span {
+  font-size: 0.55466667rem;
+  color: #666;
+  line-height: 2.13333333rem;
+  margin-left: 5.2%;
+}
+.mainPart ul li a .rightPicture {
+  width: 0.36266667rem;
+  height: 0.61866667rem;
+  align-self: center;
+  position: absolute;
+  right: 4.5%;
+}

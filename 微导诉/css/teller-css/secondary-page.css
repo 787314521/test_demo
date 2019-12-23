@@ -1,0 +1,126 @@
+body {
+  background: url(../../img/teller-img/background.png) no-repeat 0 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.middleMain {
+  width: 100%;
+  display: flex;
+  z-index: 20;
+  margin-bottom: 0.32rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.middleMain .topDetail {
+  width: 92%;
+  height: 4.26666667rem;
+  background: #f4f8ff;
+  z-index: 20;
+  border-radius: 0.14933333rem;
+  margin-top: 0.448rem;
+  display: table;
+  overflow: hidden;
+}
+.middleMain .topDetail p {
+  font-size: 0.42666667rem;
+  color: #666;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 0.64rem;
+}
+.middleMain .topDetail #scrollBox {
+  height: 2.56rem;
+  overflow: hidden;
+  color: #666;
+  margin-top: 0.85333333rem;
+}
+.middleMain .topDetail #scrollBox #con1,
+.middleMain .topDetail #scrollBox #con2 {
+  height: 2.56rem;
+  padding: 0 0.64rem;
+  margin-bottom: 2.56rem;
+}
+.middleMain .topDetail #scrollBox #con1 li,
+.middleMain .topDetail #scrollBox #con2 li {
+  line-height: 0.64rem;
+  font-size: 0.42666667rem;
+}
+.middleMain .topDetail #scrollBox .bottomBlank {
+  margin-bottom: 5.76rem !important;
+}
+.middleMain .topDetail #scrollBox .bottomBlank-1 {
+  margin-bottom: 4.48rem !important;
+}
+.animationPart {
+  width: 100%;
+  height: 19.2rem;
+  position: relative;
+  margin-bottom: 0.21333333rem;
+}
+.animationPart .musicPart {
+  height: 1.024rem;
+  width: 1.024rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 5.9%;
+  background: url(../../img/teller-img/images/music-1.png) no-repeat 0 0;
+  background-size: cover;
+  top: 0.42666667rem;
+}
+.animationPart .container {
+  width: 4.16rem;
+  height: 14.464rem;
+  margin: 0 auto;
+}
+.animationPart .containerModel {
+  width: 11.94666667rem;
+  height: 6.72rem;
+  z-index: 22;
+  position: absolute;
+  bottom: 0;
+  left: 13.7%;
+  right: 13.7%;
+}
+.backPart {
+  height: 1.28rem;
+  width: 1.28rem;
+  position: absolute;
+  right: 1.3%;
+  bottom: 0.32rem;
+}
+.backPart img {
+  height: 100%;
+  width: 100%;
+}
+.rotate {
+  -webkit-animation: rotating 1.2s linear infinite;
+  -moz-animation: rotating 1.2s linear infinite;
+  -o-animation: rotating 1.2s linear infinite;
+  animation: rotating 1.2s linear infinite;
+}
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotating {
+  from {
+    -moz-transform: rotate(0);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,35 @@
+div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  height: 100%;
+  width: 100%;
+  background: url(../../img/suit-img/suit-process/process2.png) no-repeat 0 0 #f6f6f6;
+  background-size: 100%;
+}
+.footPart {
+  position: fixed;
+  bottom: 0;
+  height: 3.05066667rem;
+  width: 100%;
+  background: url(../../img/suit-img/lawsuit/footer.png) no-repeat 0 0;
+  background-size: cover;
+}
+.footPart ul {
+  display: flex;
+  height: 2.09066667rem;
+  margin-top: 0.93866667rem;
+  position: relative;
+  bottom: 0;
+}
+.footPart ul li {
+  width: 16%;
+  height: 1.536rem;
+  align-self: center;
+  margin: 0 2%;
+  cursor: pointer;
+}
+.footPart ul li img {
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,118 @@
+div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  height: 100%;
+  width: 100%;
+  background: url(../../img/index-img/background.png) no-repeat 0 #f6f6f6;
+  background-size: cover;
+}
+.searchPart {
+  height: 2.624rem;
+  width: 92.4%;
+  margin: 0 auto;
+  margin-top: 8.832rem;
+  background: url(../../img/index-img/search.png) no-repeat 0 0;
+  background-size: cover;
+}
+.searchPart .searchInput {
+  height: 2.13333333rem;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.searchPart .searchInput a {
+  display: inline-block;
+  height: 0.896rem;
+  width: 0.896rem;
+  position: absolute;
+  left: 4.3%;
+  top: 0.32rem;
+}
+.searchPart .searchInput a img {
+  width: 100%;
+}
+.searchPart .searchInput input {
+  align-self: center;
+  width: 90%;
+  height: 1.28rem;
+  border: none;
+  line-height: 1.28rem;
+  font-size: 0.64rem;
+  padding-left: 16.9%;
+  outline: none;
+  color: #adadad;
+}
+input::-webkit-input-placeholder {
+  color: #adadad !important;
+  line-height: 1.28rem;
+}
+ input:-moz-placeholder {
+  color: #adadad !important;
+  line-height: 1.28rem;
+}
+ input::-moz-placeholder {
+  color: #adadad !important;
+  line-height: 1.28rem;
+}
+ input:-ms-input-placeholder {
+  color: #adadad !important;
+  line-height: 1.28rem;
+}
+ .menuPart {
+  height: 8.85333333rem;
+  width: 93.7%;
+  margin: 0 auto;
+  background: url(../../img/index-img/menuButton-1.png) no-repeat 0 0;
+  background-size: cover;
+}
+ .menuPart ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+ .menuPart ul li {
+  display: inline-block;
+  width: 22.5%;
+  height: 35%;
+}
+ .menuPart ul li img {
+  height: 100%;
+  width: 100%;
+}
+ .menuPart ul .leftButton {
+  margin-left: 5%;
+}
+ .menuPart ul .topButton {
+  margin-top: 5%;
+}
+.carouselPart {
+  height: 6.912rem;
+  width: 92.4%;
+  margin: 0 auto;
+  background: url(../../img/index-img/menuButton-2.png) no-repeat 0 0;
+  background-size: cover;
+}
+.carouselPart .titlePart {
+  height: 1.28rem;
+  width: 100%;
+  margin-bottom: 0.21333333rem;
+  position: relative;
+}
+.carouselPart .titlePart i {
+  height: 0.53333333rem;
+  width: 0.14933333rem;
+  background: #0485fe;
+  display: inline-block;
+  margin-left: 0.53333333rem;
+  position: absolute;
+  top: 0.49066667rem;
+}
+.carouselPart .titlePart h6 {
+  font-weight: 500;
+  color: #666;
+  font-size: 0.59733333rem;
+  display: inline-block;
+  margin-left: 6%;
+}

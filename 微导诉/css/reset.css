@@ -1,0 +1,35 @@
+div {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+a {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+select,input{-webkit-appearance:none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);   }
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	margin:0 auto;
+
+}
+em,i {
+    font-style: normal
+}
+li {
+    list-style: none
+}
+img {
+    border: 0;
+    vertical-align: middle
+}
+button {
+	border:0;
+	outline:none;
+	cursor: pointer
+}
+a {
+    color: #666;
+    text-decoration:none !important;
+}
+a:hover {
+    /*color: rgba(249,23,71,1);*/
+    text-decoration:none
+}

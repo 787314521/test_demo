@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>司法救助</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no,viewport-fit=cover">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+		<meta http-equiv="expires" content="0">
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/teller-css/secondary-page.css" />
+		<script type="text/javascript" src="../js/setRem.js"></script>
+	</head>
+	<body>
+		<!--主界面-->
+		<div class="middleMain">
+			<!--主界面介绍部分-->
+			<div class="topDetail">
+				<div id="scrollBox">
+					<ul id="con1" class="bottomBlank">
+						<li>基本原则：<br />
+							（一）公正救助。即遵行救助标准和条件，兼顾申请人实际情况和同类案件救助数额，做到公平、公正、合理救助。<br />
+							（二）及时救助。即对符合救助条件的申请人，办案机关应根据申请人申请或依据职权及时提供救助。<br />
+							法院对符合救助条件的救助申请人，无论其户籍所在地是否属于受案法院辖区范围，均由案件管辖法院负责救助。在管辖地有重大影响且救助金额较大的国家司法救助案件，上下级法院可以进行联动救助。<br />
+							对于符合司法救助条件的当事人就人身伤害或财产损失提起民事诉讼的，法院应当依法减免相关诉讼费用，司法行政部门应当依法及时提供法律援助。
+						</li>
+                    </ul>
+				</div>	
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/teller-js/scroll.js" ></script>
+		
+		<!--动画-->
+		<div class="animationPart">
+			<!--语音播放部分-->
+			<div class="musicPart rotate" id='status' onclick='triggerBgMusic()'></div>
+			<!--主界面动画部分-人物-->
+			<div class="container"></div>
+			<!--主界面动画部分-模型-->
+			<div class="containerModel"></div>
+		</div>
+
+		<!--返回首页-->
+		<div class="backPart">
+			<a href="index.html">
+				<img src="../img/teller-img/back.png" title="" alt=""/>
+			</a>
+		</div>
+		
+		<!--背景音频-->
+		<audio source src="../audio/judicial-3.wav"  id='audio'></audio>
+	</body>
+	
+	<!--动画js部分-->
+	<script type="text/javascript" src="../js/teller-js/audio.js" ></script>
+	<script type="text/javascript" src="../js/teller-js/canvas-keyframes.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var count = 0;
+			var imgArr = [];
+			for(var i=1;i<=24;i++){
+				(function(i){
+					var img = new Image();
+					img.onload = function(){
+						img.onload = null;
+						count++;
+						// 有可能图片加载有快有满慢，所以用角标存
+						imgArr[i-1] = img;
+						if(count==24){
+							keyFrames(imgArr);
+						}
+					}
+					img.onerror = function(){
+					}
+					img.src = '../img/teller-img/imgsPerson/'+i+'.png';
+				})(i);
+			} 
+			var counts = 0;
+			var imgArr1= [];
+			for(var j=1;j<=4;j++){
+				(function(j){
+					var img = new Image();
+					img.onload = function(){
+						img.onload = null;
+						counts++;
+						// 有可能图片加载有快有满慢，所以用角标存
+						imgArr1[j-1] = img;
+						if(counts==4){
+							keyFrame(imgArr1);
+						}
+					}
+					img.onerror = function(){
+					}
+					img.src = '../img/teller-img/imgModel3/'+j+'.png';
+				})(j);
+			}
+		}
+		var keyFrames;
+		function keyFrames(imgArr){
+			keyFrames = new CanvasKeyFrames(document.querySelector('.container'), 'array', imgArr, {
+				fps:5,
+				width:195,
+				height:678,
+				ratio:2
+			});
+			keyFrames.play();
+		}
+		var keyFrame;
+		function keyFrame(imgArr1){
+			keyFrame = new CanvasKeyFrames(document.querySelector('.containerModel'), 'array', imgArr1, {
+				fps:5,
+				width:560,
+				height:315
+			});
+			keyFrame.play();
+		}
+	</script>
+	<script type="text/javascript" src="../js/prevent.js" ></script>
+</html>
+

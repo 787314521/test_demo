@@ -1,0 +1,26 @@
+div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  height: 100%;
+  width: 100%;
+  background: url(../../img/suit-img/suit-material/material.png) no-repeat 0 0 #f6f6f6;
+  background-size: 100%;
+}
+.footPart {
+  position: fixed;
+  bottom: 0;
+  height: 3.05066667rem;
+  width: 100%;
+  background: url(../../img/suit-img/lawsuit/footer.png) no-repeat 0 0;
+  background-size: cover;
+}
+.footPart a {
+  font-size: 0.512rem;
+  line-height: 3.84rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 3.05066667rem;
+  color: indianred;
+}

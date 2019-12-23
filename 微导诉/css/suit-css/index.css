@@ -1,0 +1,106 @@
+div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  height: 100%;
+  width: 100%;
+  background: url(../../img/suit-img/index-images/in.png) no-repeat 0 0 #f6f6f6;
+  background-size: 100%;
+}
+.indexBackground {
+  height: 8.384rem;
+  width: 100%;
+  margin-bottom: 0.64rem;
+}
+.indexBackground img {
+  height: 100%;
+  width: 100%;
+}
+.lawPart {
+  height: 4.608rem;
+  width: 86%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 0.21333333rem;
+  box-shadow: 0 0.32rem 0.32rem 0 #d7d7d7;
+  margin-bottom: 0.64rem;
+}
+.lawPart ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.lawPart ul li {
+  display: flex;
+  width: 49.8%;
+  height: 3.02933333rem;
+  align-self: center;
+}
+.lawPart ul li a {
+  height: 2.688rem;
+  width: 70%;
+  display: block;
+  align-self: center;
+  margin: 0 auto;
+}
+.lawPart ul li a img {
+  width: 100%;
+  height: 100%;
+}
+.lawPart ul .leftLine {
+  border-right: 1px solid #ddd;
+}
+.lawsuitPart {
+  height: 9.30133333rem;
+  width: 86%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 0.21333333rem;
+  box-shadow: 0 0.32rem 0.32rem 0 #d7d7d7;
+  margin-bottom: 0.64rem;
+}
+.lawsuitPart ul {
+  height: 49%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.lawsuitPart ul li {
+  display: flex;
+  width: 49.8%;
+  height: 3.02933333rem;
+  align-self: center;
+}
+.lawsuitPart ul li a {
+  height: 2.70933333rem;
+  width: 57%;
+  display: block;
+  align-self: center;
+  margin: 0 auto;
+}
+.lawsuitPart ul li a img {
+  width: 100%;
+  height: 100%;
+}
+.lawsuitPart ul .leftLine {
+  border-right: 1px solid #ddd;
+}
+.lawsuitPart .bottomLine {
+  height: 2px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.lawsuitPart .bottomLine li {
+  display: flex;
+  width: 49.8%;
+  height: 2px;
+  align-self: center;
+}
+.lawsuitPart .bottomLine li .b-line {
+  height: 2px;
+  width: 44%;
+  background: #efefef;
+  margin: 0 auto;
+}

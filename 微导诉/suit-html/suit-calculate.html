@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>诉讼费用计算</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no,viewport-fit=cover">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!--<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="pragma" content="no-cache">-->
+		<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+		<meta http-equiv="expires" content="0">
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/suit-css/suit-calculate.css" />
+		<script type="text/javascript" src="../js/setRem.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js" ></script>
+	</head>
+	<body>
+		<!--参考诉讼费-->
+		<div class="headPart">
+			<span id="referencePart">参考诉讼费</span>
+			<p id="resultInput">Reference litigation fee</p><span id="moneyPart">/元</span>
+		</div>
+		<!--案件类型-->
+		<div class="titlePart">
+	    	<i></i>
+	    	<span>请选择案件类型</span>
+	    </div>
+	    <!--下拉菜单栏-->
+	    <div class="optionMenu">
+	    	<div id="caseTypeBox">
+				<div class="typeInputBox">
+					<select id="selectPart">
+						<option value="财产案件">财产案件</option>
+						<option value="普通非财产案件">普通非财产案件</option>
+						<option value="离婚案件">离婚案件</option>
+						<option value="人格权案件">人格权案件</option>
+						<option value="知识产权案件">知识产权案件</option>
+						<option value="劳动争议案件">劳动争议案件</option>
+						<option value="行政案件">行政案件</option>
+						<option value="商标专利海事行政案件">商标专利海事行政案件</option>
+						<option value="管辖权异议不成立案件">管辖权异议不成立案件</option>
+					</select>
+					<div class="arrowDownBox">
+						<i></i>
+					</div>
+				</div>			
+			</div>
+	    </div>
+	   	<!-- 标额-->
+	   	<div class="titlePart">
+	    	<i></i>
+	    	<span>请输入标的额</span>
+	    	<span id="limited">*请输入数字（可含小数）</span>
+	    </div>
+	    <!--键盘输入-->
+	    <div class="optionMenu">
+	    	<div class="input_box">
+				<input type="text" id="inputAmount" placeholder="请输入数值" onKeyUp="this.value=this.value.replace(/[^\d\.]/g,'')" onBlur="checknum(this)" />
+				<span>元</span>
+			</div>
+	    </div>
+	    <!--选择-->
+	    <div class="cut_line">
+			<input type="checkbox" id="belong" />
+			<label for="belong" class="belong_label">
+				<span class="tips">属于适用简易程序或调解结案或撤诉案件</span>
+			</label>
+		</div>
+		
+		<!--计算与重置-->
+		<div class="btn_box fl">
+			<button id="result"></button>
+			<button id="reset"></button>
+		</div>
+		<div class="tips refer">*以上结果仅供参考</div>
+	</body>
+	
+	<script type="text/javascript" src="../js/suit-js/calculate.js" ></script>
+	<script type="text/javascript">
+		var limited=document.getElementById("limited");
+		var inp=document.getElementById("inputAmount");
+		var result=document.getElementById("resultInput");
+		function checknum(obj){
+    	if(!/^\d*(\.\d{1,2})?$/.test(obj.value))
+//  	alert("错误：必须为数值!")
+		limited.style.display="inline-block"
+		result.innerHTML="";
+		}
+		inp.onfocus=function(){
+		limited.style.display="none";
+		}
+</script>
+<script type="text/javascript" src="../js/prevent.js" ></script>
+</html>

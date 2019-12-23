@@ -1,0 +1,32 @@
+body {
+  height: 100%;
+  width: 100%;
+  background: #f6f6f6;
+  overflow: hidden;
+}
+body .titlePart {
+  height: 1.28rem;
+  width: 43.5%;
+  margin-left: 0.42666667rem;
+  margin-top: 0.64rem;
+}
+body ul {
+  height: auto;
+  margin-top: 0.96rem;
+}
+body ul li {
+  width: 78%;
+  height: 3.73333333rem;
+  margin: 0 auto;
+}
+body ul li img {
+  height: 100%;
+  width: 100%;
+}
+body .footPart {
+  height: 2.34666667rem;
+  width: 78%;
+  margin: 0 auto;
+  margin-top: 0.32rem;
+  display: block;
+}
