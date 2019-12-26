@@ -1,0 +1,23 @@
+{
+  "id": "1555936",
+  "name": "execute",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5275523",
+      "name": "手铐",
+      "font_class": "shoukao",
+      "unicode": "e7b9",
+      "unicode_decimal": 59321
+    },
+    {
+      "icon_id": "6129176",
+      "name": "135消息、通知、提醒、铃声、铃铛",
+      "font_class": "xiaoxitongzhitixinglingshenglingdang",
+      "unicode": "e794",
+      "unicode_decimal": 59284
+    }
+  ]
+}
