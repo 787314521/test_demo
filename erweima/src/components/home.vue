@@ -91,7 +91,7 @@ export default {
   }
   .mark {
     margin: 0 auto;
-    // margin-top: 1rem;
+    margin-top: -20/@rem;
     text-align: center;
     width: 100%;
     span {
@@ -111,7 +111,6 @@ export default {
   .next {
     position: relative;
     margin: 0 auto;
-    margin-top: 0.2rem;
     width: 1.5rem;
     height: 0.6rem;
     img {

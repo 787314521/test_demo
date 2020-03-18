@@ -88,7 +88,7 @@ export default {
     width: 90%;
     height: 2rem;
     margin: 0 auto;
-    margin-top: 0.5rem;
+    margin-top: 5/@rem;
     span {
       float: left;
       font-size: 8/@rem;
@@ -112,6 +112,7 @@ export default {
     width: 90%;
     height: 2rem;
     margin: 0 auto;
+    margin-top: -20/@rem;
     span {
       float: left;
       font-size: 8/@rem;
@@ -136,6 +137,7 @@ export default {
     margin: 0 auto;
     width: 1.5rem;
     height: 0.6rem;
+    margin-top: -20/@rem;
     img {
       float: left;
       width: 100%;
